@@ -8,6 +8,7 @@
 [ext_resource path="res://imagenes/piso casa.png" type="Texture" id=6]
 [ext_resource path="res://imagenes/pasto.png" type="Texture" id=7]
 [ext_resource path="res://imagenes/valla-costado.png" type="Texture" id=8]
+[ext_resource path="res://escena/personajes/guardia.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 0, 32, 0, 0, 0, 0, 32 )
@@ -165,12 +166,9 @@ points = PoolVector2Array( 0, 13.25, 32, 11.25, 32, 32, 0, 32 )
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 15.7974, 68.8036 )
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 11.8517, 14.3031 )
-
-[node name="Node2D" type="Node2D"]
+[node name="casa_de_francia" type="Node2D"]
 pause_mode = 1
-position = Vector2( -176.854, -180.098 )
+position = Vector2( -170.504, -164.224 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -1.69666, -3.64264 )
@@ -191,14 +189,19 @@ position = Vector2( 1421.71, 203.657 )
 shape = SubResource( 9 )
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2( -32.6553, 1.76756 )
+position = Vector2( 207.06, 184.208 )
 
-[node name="francia" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 509.85, 252.588 )
+[node name="francia" parent="." instance=ExtResource( 1 )]
+position = Vector2( 562.516, 384.242 )
 
-[node name="Area2D" type="Area2D" parent="Node2D/francia"]
-position = Vector2( 2.24747, -0.749146 )
+[node name="KinematicBody2D" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1359.45, 205.045 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/francia/Area2D"]
-position = Vector2( -0.777985, -2.48373 )
-shape = SubResource( 10 )
+[node name="KinematicBody2D" parent="KinematicBody2D" instance=ExtResource( 9 )]
+position = Vector2( -0.324585, 163.691 )
+
+[node name="KinematicBody2D" parent="KinematicBody2D/KinematicBody2D" instance=ExtResource( 9 )]
+position = Vector2( -548.328, -30.6423 )
+
+[node name="KinematicBody2D2" parent="KinematicBody2D/KinematicBody2D" instance=ExtResource( 9 )]
+position = Vector2( -549.387, -133.41 )
