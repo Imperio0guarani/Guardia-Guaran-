@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://casa_de_francia.tscn")
+	get_tree().change_scene("res://escena/casa_de_francia.tscn")
 
 
 func _on_Button2_pressed():

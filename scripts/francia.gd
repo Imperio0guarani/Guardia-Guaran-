@@ -35,5 +35,6 @@ func _process(delta):
 	if Input.is_action_pressed("ui_right"):
 		$AnimatedSprite.flip_h = false
 	if Input.is_action_pressed("select"):
-		get_tree().change_scene("res://menu.tscn")
-		
+		get_tree().change_scene("res://escena/menu.tscn")
+#codigo de pausa empieza
+

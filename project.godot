@@ -11,8 +11,13 @@ config_version=4
 [application]
 
 config/name="el juego del doctor francia"
-run/main_scene="res://casa_de_francia.tscn"
+run/main_scene="res://escena/casa_de_francia.tscn"
 config/icon="res://imagenes/francia moviendose-2.png"
+
+[autoload]
+
+PortalScript="*res://scripts/portalScript.gd"
+Rr="*res://scripts/RR.gd"
 
 [display]
 
