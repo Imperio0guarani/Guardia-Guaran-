@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://imagenes/francia quieto.png" type="Texture" id=1]
+[ext_resource path="res://scripts/francia.gd" type="Script" id=2]
+[ext_resource path="res://imagenes/francia moviendose-2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "quieto",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "run2",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 13.1623, 16.1674 )
+
+[node name="francia" type="KinematicBody2D"]
+position = Vector2( -1.16815, -1.06112 )
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1.01003, -2.24747 )
+frames = SubResource( 1 )
+animation = "run"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.6, 0.6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 1.1315, -2.36721 )
+shape = SubResource( 2 )
+one_way_collision_margin = 117.2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 0.794601, -20.3947 )
+
+[node name="Label" type="Label" parent="Position2D"]
+margin_left = -19.7325
+margin_top = -12.5811
+margin_right = 20.2675
+margin_bottom = 1.41887
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

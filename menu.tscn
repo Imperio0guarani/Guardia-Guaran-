@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fondo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://imagenes/francia quieto.png" type="Texture" id=2]
+[ext_resource path="res://scripts/menu.gd" type="Script" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 11.0386
+margin_top = -10.4577
+margin_right = 11.0386
+margin_bottom = -10.4578
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "jugar
+"
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 511.587, 302.413 )
+
+[node name="vboxmenu" type="VBoxContainer" parent="."]
+anchor_left = 0.34
+anchor_top = 0.173
+anchor_right = 0.661
+anchor_bottom = 0.589
+margin_left = -366.44
+margin_top = -145.864
+margin_right = 91.074
+margin_bottom = 177.648
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="vboxmenu"]
+margin_top = 281.0
+margin_right = 896.0
+margin_bottom = 301.0
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+text = "jugar"
+flat = true
+
+[node name="Button2" type="Button" parent="vboxmenu"]
+margin_top = 305.0
+margin_right = 896.0
+margin_bottom = 325.0
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+text = "salir"
+flat = true
+
+[node name="vboxcontroles" type="VBoxContainer" parent="vboxmenu"]
+margin_top = 329.0
+margin_right = 896.0
+margin_bottom = 361.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="logo" type="TextureRect" parent="vboxmenu/vboxcontroles"]
+margin_right = 896.0
+margin_bottom = 32.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 1 )]
+
+[connection signal="pressed" from="vboxmenu/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="vboxmenu/Button2" to="." method="_on_Button2_pressed"]
