@@ -36,4 +36,4 @@ func _process(delta):
 		$AnimatedSprite.flip_h = false
 	if Input.is_action_pressed("select"):
 		get_tree().change_scene("res://menu.tscn")
-	
+		

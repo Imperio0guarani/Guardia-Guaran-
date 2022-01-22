@@ -13,13 +13,13 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "run",
-"speed": 10.0
+"name": "run2",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "run2",
-"speed": 5.0
+"name": "run",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]

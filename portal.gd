@@ -1,4 +1,4 @@
-extends Control
+extends Area2D
 
 
 # Declare member variables here. Examples:
@@ -14,11 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Button_pressed():
-	get_tree().change_scene("res://casa_de_francia.tscn")
-
-
-func _on_Button2_pressed():
-	get_tree().quit()

@@ -26,10 +26,10 @@ anchor_left = 0.34
 anchor_top = 0.173
 anchor_right = 0.661
 anchor_bottom = 0.589
-margin_left = -366.44
-margin_top = -145.864
-margin_right = 91.074
-margin_bottom = 177.648
+margin_left = -282.535
+margin_top = -78.4402
+margin_right = 174.979
+margin_bottom = 245.072
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -37,7 +37,7 @@ __meta__ = {
 
 [node name="Button" type="Button" parent="vboxmenu"]
 margin_top = 281.0
-margin_right = 896.0
+margin_right = 895.0
 margin_bottom = 301.0
 custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
 text = "jugar"
@@ -45,7 +45,7 @@ flat = true
 
 [node name="Button2" type="Button" parent="vboxmenu"]
 margin_top = 305.0
-margin_right = 896.0
+margin_right = 895.0
 margin_bottom = 325.0
 custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
 text = "salir"
@@ -53,14 +53,14 @@ flat = true
 
 [node name="vboxcontroles" type="VBoxContainer" parent="vboxmenu"]
 margin_top = 329.0
-margin_right = 896.0
+margin_right = 895.0
 margin_bottom = 361.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="logo" type="TextureRect" parent="vboxmenu/vboxcontroles"]
-margin_right = 896.0
+margin_right = 895.0
 margin_bottom = 32.0
 texture = ExtResource( 2 )
 stretch_mode = 2
